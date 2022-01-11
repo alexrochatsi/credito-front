@@ -9,20 +9,23 @@ import { HeaderComponent } from './components/template/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
-
-
+import {MatTableModule} from '@angular/material/table';
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
+import { HomeComponent } from './components/views/home/home.component';
+import { ClienteReadComponent } from './components/views/cliente/cliente-read/cliente-read.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    ClienteReadComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,9 @@ import { NavComponent } from './components/template/nav/nav.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
