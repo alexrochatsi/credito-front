@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cliente } from '../cliente.model';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-cliente-read',
@@ -7,11 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteReadComponent implements OnInit {
 
-  constructor() { }
+  clientes: Cliente[] = [];
+
+  displayedColumns: string[] = ['id', 'name', 'email', 'cpf', 'renda' , 'cidade', 'acoes'];
+
+  constructor(private service: ClienteService) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
 
-  displayedColumns: string[] = ['id', 'name', 'email', 'cpf', 'renda', 'acoes'];
+  findAll() {
+    this.service.findAll().subscribe(resposta => {
+      console.log(resposta);
+      this.clientes = resposta;
+    })
+  }
+
 
 }
