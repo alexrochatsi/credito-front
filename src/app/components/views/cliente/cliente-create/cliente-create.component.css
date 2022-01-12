@@ -1,0 +1,44 @@
+form {
+    text-align: left;
+    width: 70%;
+    margin: 2rem auto 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.form {
+    width: 100%;
+}
+
+.form2 {
+    width: 50%;
+}
+
+.form3 {
+    width: 30%;
+}
+
+.divider {
+    margin: 1.5rem auto;
+}
+
+.buttons {
+    width: 100%;
+    text-align: start;
+}
+
+button {
+    margin-right: 5rem;
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+}

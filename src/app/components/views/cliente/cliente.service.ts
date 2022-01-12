@@ -17,4 +17,9 @@ export class ClienteService {
     const url = `${this.baseUrl}/clientes`
     return this.http.get<Cliente[]>(url)
   }
+
+  create(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrl}/clientes`
+    return this.http.post<Cliente>(url, cliente);
+  }
 }
