@@ -14,6 +14,27 @@
     font-weight: bold;
 }
 
+button {
+    margin-bottom: 1rem;
+}
+
 .table {
     width: 100%;
+}
+
+.edit {
+    color: rgb(16, 167, 36);
+}
+
+.delete {
+    color: rgb(189, 22, 22);
+    margin-left: .5rem;
+}
+
+.mat-header {
+    width: 5rem;
+}
+.emprestimos {
+    margin-left: 2rem;
+    color: goldenrod;
 }

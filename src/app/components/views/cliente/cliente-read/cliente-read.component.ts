@@ -11,7 +11,7 @@ export class ClienteReadComponent implements OnInit {
 
   clientes: Cliente[] = [];
 
-  displayedColumns: string[] = ['id', 'name', 'email', 'cpf', 'renda' , 'cidade', 'acoes'];
+  displayedColumns: string[] = ['id', 'name', 'email', 'cpf', 'renda' , 'cidade', 'emprestimos', 'acoes'];
 
   constructor(private service: ClienteService) { }
 
