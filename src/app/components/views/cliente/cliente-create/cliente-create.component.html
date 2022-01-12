@@ -1,8 +1,49 @@
 <form>
     <h1>CADASTRANDO UM NOVO CLIENTE</h1>
+    <p>
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" name="name" placeholder="Nome do cliente">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>CPF</mat-label>
+            <input matInput type="text" name="cpf" placeholder="CPF sem pontos">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>RG</mat-label>
+            <input matInput type="text" name="rg" placeholder="Informe o RG">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>Renda</mat-label>
+            <input matInput type="text" name="renda" placeholder="Informe a renda">
+            <mat-hint>Hint</mat-hint>
+        </mat-form-field>
+
+    </p>
+
     <mat-form-field class="form" appearance="outline">
-        <mat-label>Nome</mat-label>
-        <input matInput type="text" name="name" placeholder="Nome do cliente">
+        <mat-label>E-mail</mat-label>
+        <input matInput type="email" name="email" placeholder="E-mail do cliente">
     </mat-form-field>
-    
+
+    <mat-form-field class="form" appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input matInput type="password" name="senha" placeholder="Senha do cliente">
+    </mat-form-field>
+
+    <mat-divider></mat-divider>
+    <h2>ENDEREÇO DO CLIENTE</h2>
+    <P>
+        <mat-form-field class="form" appearance="outline">
+            <mat-label>Logradouro</mat-label>
+            <input matInput type="text" name="logradouro" placeholder="Logradouro">
+        </mat-form-field>
+    </P>
+
 </form>

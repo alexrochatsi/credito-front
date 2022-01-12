@@ -15,7 +15,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -47,6 +49,7 @@ import { ClienteCreateComponent } from './components/views/cliente/cliente-creat
     MatButtonModule,
     MatFormFieldModule,
     FormsModule,
+    MatDividerModule
 
   ],
   providers: [],
