@@ -14,12 +14,14 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
-
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { ClienteReadComponent } from './components/views/cliente/cliente-read/cliente-read.component';
+import { ClienteCreateComponent } from './components/views/cliente/cliente-create/cliente-create.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { ClienteReadComponent } from './components/views/cliente/cliente-read/cl
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ClienteReadComponent
+    ClienteReadComponent,
+    ClienteCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,9 @@ import { ClienteReadComponent } from './components/views/cliente/cliente-read/cl
     MatCardModule,
     MatTableModule,
     HttpClientModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    FormsModule,
 
   ],
   providers: [],
