@@ -36,6 +36,10 @@ export class ClienteCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  cancel(): void {
+    this.router.navigate(['clientes'])
+  }
+
   create(): void {
     this.service.create(this.cliente).subscribe((resposta) => {
       this.router.navigate(['/clientes']);
