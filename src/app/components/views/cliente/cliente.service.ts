@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Cliente } from './cliente.model';
@@ -11,7 +12,7 @@ export class ClienteService {
 
   baseUrl: String = environment.baseUrl;
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private _snack: MatSnackBar) { }
 
   findAll():Observable<Cliente[]> {
     const url = `${this.baseUrl}/clientes`
@@ -21,5 +22,13 @@ export class ClienteService {
   create(cliente: Cliente): Observable<Cliente> {
     const url = `${this.baseUrl}/clientes`
     return this.http.post<Cliente>(url, cliente);
+  }
+
+  mensagem(str: String): void {
+    this._snack.open(`${str}`, 'Ok', ({
+      horizontalPosition: 'end',
+      verticalPosition: 'top',
+      duration: 3000
+    }))
   }
 }

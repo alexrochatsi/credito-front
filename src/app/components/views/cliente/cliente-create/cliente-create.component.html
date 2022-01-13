@@ -3,35 +3,41 @@
     <p>
         <mat-form-field class="form" appearance="outline">
             <mat-label>Nome</mat-label>
-            <input matInput type="text" name="name" placeholder="Nome do cliente">
+            <input [(ngModel)]="cliente.name" matInput type="text" name="name" placeholder="Nome do cliente" required>
+            <mat-error>O nome é requerido!</mat-error>
         </mat-form-field>
     
     </p>
 
         <mat-form-field class="form3" appearance="outline">
             <mat-label>CPF</mat-label>
-            <input matInput type="text" name="cpf" placeholder="CPF sem pontos">
+            <input [(ngModel)]="cliente.cpf" matInput type="text" name="cpf" placeholder="CPF sem pontos" required>
+            <mat-error>O CPF é requerido!</mat-error>
         </mat-form-field>
 
         <mat-form-field class="form3" appearance="outline">
             <mat-label>RG</mat-label>
-            <input matInput type="text" name="rg" placeholder="Informe o RG">
+            <input [(ngModel)]="cliente.rg" matInput type="text" name="rg" placeholder="Informe o RG" required>
+            <mat-error>O RG é requerido!</mat-error>
         </mat-form-field>
 
         <mat-form-field class="form3" appearance="outline">
             <mat-label>Renda</mat-label>
-            <input matInput type="text" name="renda" placeholder="Informe a renda">
+            <input [(ngModel)]="cliente.renda" matInput type="number" name="renda" placeholder="Informe a renda" required>
+            <mat-error>A Renda é requerida!</mat-error>
         </mat-form-field>
     
     <mat-divider class="divider"></mat-divider>
     <mat-form-field class="form2" appearance="outline">
         <mat-label>E-mail</mat-label>
-        <input matInput type="email" name="email" placeholder="E-mail do cliente">
+        <input [(ngModel)]="cliente.email" matInput type="email" name="email" placeholder="E-mail do cliente" required>
+        <mat-error>O E-mail é requerido!</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form2" appearance="outline">
         <mat-label>Senha</mat-label>
-        <input matInput type="password" name="senha" placeholder="Senha do cliente">
+        <input [(ngModel)]="cliente.senha" matInput type="password" name="senha" placeholder="Senha do cliente" required>
+        <mat-error>A Senha é requerida!</mat-error>
     </mat-form-field>
 
     <mat-divider class="divider"></mat-divider>
@@ -39,42 +45,47 @@
     <P>
         <mat-form-field class="form2" appearance="outline">
             <mat-label>Logradouro</mat-label>
-            <input matInput type="text" name="logradouro" placeholder="Logradouro">
+            <input [(ngModel)]="endereco.logradouro" matInput type="text" name="logradouro" placeholder="Logradouro" required>
+            <mat-error>O Logradouro é requerido!</mat-error>
         </mat-form-field>
 
         <mat-form-field class="form2" appearance="outline">
             <mat-label>Complemento</mat-label>
-            <input matInput type="text" name="complemento" placeholder="Complemento">
+            <input [(ngModel)]="endereco.complemento" matInput type="text" name="complemento" placeholder="Complemento">
         </mat-form-field>
     </P>
 
     <p>
         <mat-form-field class="form3" appearance="outline">
             <mat-label>Bairro</mat-label>
-            <input matInput type="text" name="bairro" placeholder="Bairro">
+            <input [(ngModel)]="endereco.bairro" matInput type="text" name="bairro" placeholder="Bairro" required>
+            <mat-error>O Bairro é requerido!</mat-error>
         </mat-form-field>
         <mat-form-field class="form3" appearance="outline">
             <mat-label>Numero</mat-label>
-            <input matInput type="text" name="numero" placeholder="Número">
+            <input [(ngModel)]="endereco.numero" matInput type="text" name="numero" placeholder="Número">
         </mat-form-field>
         <mat-form-field class="form3" appearance="outline">
             <mat-label>CEP</mat-label>
-            <input matInput type="text" name="cep" placeholder="Cep">
+            <input [(ngModel)]="endereco.cep" matInput type="text" name="cep" placeholder="Cep" required>
+            <mat-error>O CEP é requerido!</mat-error>
         </mat-form-field>
     </p>
 
     <mat-form-field class="form2" appearance="outline">
         <mat-label>Cidade</mat-label>
-        <input matInput type="text" name="cidade" placeholder="Cidade">
+        <input [(ngModel)]="endereco.cidade" matInput type="text" name="cidade" placeholder="Cidade" required>
+        <mat-error>A Cidade é requerida!</mat-error>
     </mat-form-field>
 
     <mat-form-field class="form2" appearance="outline">
         <mat-label>Estado</mat-label>
-        <input matInput type="text" name="estado" placeholder="Estado">
+        <input [(ngModel)]="endereco.estado" matInput type="text" name="estado" placeholder="Estado" required>
+        <mat-error>O Estado é requerido!</mat-error>
     </mat-form-field>
 
     <div class="buttons">
-        <button (click)="create" class="mat-elevation-z8" mat-raised-button color="primary">CRIAR</button>
+        <button (click)="create()" class="mat-elevation-z8" mat-raised-button color="primary">CRIAR</button>
         <button class="mat-elevation-z8" mat-raised-button color="warm">CANCELAR</button>
     </div>
 

@@ -18,8 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from "@angular/forms";
 import {MatDividerModule} from '@angular/material/divider';
 import {MatInputModule} from '@angular/material/input';
-
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavComponent } from './components/template/nav/nav.component';
@@ -52,7 +51,8 @@ import { ClienteCreateComponent } from './components/views/cliente/cliente-creat
     MatFormFieldModule,
     FormsModule,
     MatDividerModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
 
   ],
   providers: [],
