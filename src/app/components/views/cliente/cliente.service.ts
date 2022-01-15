@@ -20,13 +20,19 @@ export class ClienteService {
   }
 
   findById(id: String): Observable<Cliente> {
-    const url = `${this.baseUrl}/clientes/${id}`
-    return this.http.get<Cliente>(url)
+    const url = `${this.baseUrl}/clientes/${id}`;
+    console.log(this.http.get<Cliente>(url))
+    return this.http.get<Cliente>(url);
   }
 
   create(cliente: Cliente): Observable<Cliente> {
     const url = `${this.baseUrl}/clientes`
     return this.http.post<Cliente>(url, cliente);
+  }
+
+  delete(id: String): Observable<void> {
+    const url = `${this.baseUrl}/clientes/${id}`;
+    return this.http.delete<void>(url);
   }
 
   mensagem(str: String): void {

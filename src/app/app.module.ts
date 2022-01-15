@@ -26,6 +26,9 @@ import { HomeComponent } from './components/views/home/home.component';
 import { ClienteReadComponent } from './components/views/cliente/cliente-read/cliente-read.component';
 import { ClienteCreateComponent } from './components/views/cliente/cliente-create/cliente-create.component';
 import { ClienteDeleteComponent } from './components/views/cliente/cliente-delete/cliente-delete.component';
+import { EmprestimoReadComponent } from './components/views/emprestimo/emprestimo-read/emprestimo-read.component';
+import { EmprestimoCreateComponent } from './components/views/emprestimo/emprestimo-create/emprestimo-create.component';
+import { EmprestimoDeleteComponent } from './components/views/emprestimo/emprestimo-delete/emprestimo-delete.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,10 @@ import { ClienteDeleteComponent } from './components/views/cliente/cliente-delet
     HomeComponent,
     ClienteReadComponent,
     ClienteCreateComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    EmprestimoReadComponent,
+    EmprestimoCreateComponent,
+    EmprestimoDeleteComponent
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,7 @@ export class ClienteCreateComponent implements OnInit {
       this.service.mensagem('Cliente criado com sucesso!');
     }, err => {
       for (let i =0; i < err.error.errors.lenght; i ++) {
-        this.service.mensagem(err.error.errors[i].message);
+        this.service.mensagem(err.error.errors[i]);
       }
     })
   }

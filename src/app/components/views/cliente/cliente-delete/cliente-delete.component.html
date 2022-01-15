@@ -3,21 +3,19 @@
     <p>
         <mat-form-field class="form" appearance="outline">
             <mat-label>Nome</mat-label>
-            <input matInput type="text" name="name" placeholder="Nome do cliente" disabled>
-            <mat-error>O nome é requerido!</mat-error>
+            <input matInput [(ngModel)]="cliente.name"type="text" name="name" disabled>
         </mat-form-field>
     
     </p>
 
         <mat-form-field class="form3" appearance="outline">
             <mat-label>CPF</mat-label>
-            <input  matInput type="text" name="cpf" placeholder="CPF sem pontos" disabled>
-            <mat-error>O CPF é requerido!</mat-error>
+            <input  matInput [(ngModel)]="cliente.cpf" type="text" name="cpf" disabled>
         </mat-form-field>
 
         <div class="buttons">
-            <button class="mat-elevation-z8" mat-raised-button color="warn">DELETAR</button>
-            <button class="mat-elevation-z8" mat-stroked-button color="warn">CANCELAR</button>
+            <button class="mat-elevation-z8" (click)="delete()" mat-raised-button color="warn">DELETAR</button>
+            <button class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">CANCELAR</button>
         </div>
     
     </form>
