@@ -19,6 +19,17 @@ export class EmprestimoService {
     return this.http.post<Emprestimo>(url, emprestimo);
   }
 
+  findByIdCliente(emprestimo: Emprestimo): Observable<Emprestimo>{
+    const url = `${this.baseUrl}/emprestimos?cliente=${emprestimo.cliente.id}`;
+    return this.http.get<Emprestimo>(url);
+  }
+
+  findById(id: String): Observable<Emprestimo> {
+    const url = `${this.baseUrl}/emprestimos/${id}`;
+    console.log(this.http.get<Emprestimo>(url))
+    return this.http.get<Emprestimo>(url);
+  }
+
   mensagem(str: String): void {
     this._snack.open(`${str}`, 'Ok', ({
       horizontalPosition: 'end',
